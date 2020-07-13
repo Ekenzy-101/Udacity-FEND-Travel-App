@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        Travel Planner
+      </header>
+
+      <section class="body">
+        <div class="img-body">
+          <img src="./city.jpg" alt="city" class="img" />
+        </div>
+
+        <div class="details">
+          <p>
+            My trip to:<span class="city"></span>
+            <span class="country"> </span>
+          </p>
+          <p>
+            Location: Latitude-<span id="lat"></span> Longitude-<span
+              id="lng"
+            ></span>
+          </p>
+          <div class="btn-group">
+            <button class="save btn">Save Trip</button>
+            <button class="remove btn">Remove Trip</button>
+          </div>
+          <p class="distance">
+            <span class="city"></span>,<span class="country"></span> is
+            <span id="duration"></span> days
+          </p>
+          <p class="weather-title">Typical Weather for then is:</p>
+          <p class="temp">
+            High - <span id="high-temp"></span>, Low -
+            <span id="low-temp"></span>
+          </p>
+        </div>
+
+        <form class="form">
+          <div class="form-group">
+            <label for="destination" class="label">Destination:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="destination"
+              id="destination"
+              placeholder="Enter Destination"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="start-date" class="label">Start Date:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="start-date"
+              id="start-date"
+              placeholder="Enter Start Date"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="end-date" class="label">End Date:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="end-date"
+              id="end-date"
+              placeholder="Enter End Date"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <button
+              type="button"
+              role="button"
+              class="form-control btn"
+              id="btn-submit"
+            >
+              BOOK FLIGHT
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <footer class="footer">This app is brought to you by kenzy</footer>
+    </div>
+
+    <!--Register a Service Worker-->
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

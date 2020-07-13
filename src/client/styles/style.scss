@@ -1,0 +1,165 @@
+$primary-color: #5e6;
+$background-color: #2a2;
+$secondary-color: #eee;
+$body-color: #ccc;
+$placeholder-color: #aaa;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+#btn-submit {
+  width: fit-content;
+  margin: 0.5rem auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.header {
+  background: $background-color;
+  color: $secondary-color;
+  padding: 1.5rem;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  min-height: 28rem;
+  width: 100%;
+  background-color: $body-color;
+}
+
+.details {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  flex: 1;
+  order: 3;
+}
+
+.footer {
+  background-color: $primary-color;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  order: 0;
+  flex-direction: column;
+  padding: 1.5rem 0 0 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 1rem 0;
+  margin: 1rem auto;
+}
+
+.form-control {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: $placeholder-color;
+}
+
+.img-body {
+  flex: 1;
+  order: 2;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.img {
+  height: 70%;
+  width: 100%;
+}
+
+.label {
+  text-transform: uppercase;
+}
+
+p,
+.btn-group {
+  margin: 1rem 0;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn {
+  margin-right: 2rem;
+  color: $primary-color;
+  padding: 0.5rem 0.7rem;
+  background-color: $secondary-color;
+  border: 1px solid $primary-color;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+}
+
+.btn:hover {
+  color: $secondary-color;
+  background: $primary-color;
+  transform: scale(1.05) translateY(2px);
+  transition: all 0.3s 0.3s;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .form-group {
+    margin: 1rem auto;
+  }
+
+  .img {
+    width: 85%;
+  }
+
+  .img-body {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
